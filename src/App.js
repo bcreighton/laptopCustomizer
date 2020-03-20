@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import FEATURES from './FEATURES';
+import Header from './components/Header'
 import FeatureSet from './components/FeatureSet';
 import Cart from './components/Cart';
 
@@ -45,9 +46,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header>
-          <h1>ELF Computing | Laptops</h1>
-        </header>
+        <Header />
         <main>
           <FeatureSet
             USCurrencyFormat={USCurrencyFormat}
