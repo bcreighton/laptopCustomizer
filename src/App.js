@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Features from './components/features';
-import Cart from './components/cart';
+import FEATURES from './FEATURES';
+import FeatureSet from './components/FeatureSet';
+import Cart from './components/Cart';
 
 // This object will allow us to
 // easily convert numbers into US dollar values
@@ -48,10 +49,10 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <Features
+          <FeatureSet
             USCurrencyFormat={USCurrencyFormat}
             selected={this.state.selected}
-            features={this.props.features}
+            features={FEATURES}
             updateFeature={(feature, newValue) => this.updateFeature(feature, newValue)}
           />
           <section className="main__summary">
